@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title id="headtitle">Grid Lines Generator | FlyingKatsu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link href="css/normalize.css" rel="stylesheet" media="all">
+  <link href="css/styles.css" rel="stylesheet" media="all">
+
+  <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
+  <script src="js/concrete.min.js" media="all"></script>
+  <script defer src="js/main.js" media="all"></script>
+
+  <style>
+    #canvasWrapper {
+      text-align: center;
+    }
+    #canvasWrapper > canvas {
+      border: 1px solid;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 1em;
+      margin-bottom: 1em;
+    }
+    header > h1 {
+      margin: 0;
+    }
+    #wrap {
+      width: 64em;
+      margin: 0 auto;
+    }
+    #controlMenu, #canvasWrapper {
+      display: inline-block;
+      vertical-align: top;
+    }
+    #controlMenu {
+      width: 28em;
+    }
+    legend {
+      font-weight: bold;
+    }
+    input {
+      width: 4em;
+    }
+    .inputset {
+      margin: 0.75em 0;
+    }
+    #buttons {
+      margin: 1em 0;
+    }
+    fieldset > fieldset {
+      margin: 1em 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header role="banner">
+    <h1 id="bodytitle">Grid Lines Generator</h1>
+  </header>
+
+  <div class="wrap">
+    <main role="main">
+      <div id="controlMenu">
+          <fieldset class="controls">
+            <legend>Controls</legend>
+
+            <div id="buttons">
+              <button id="reset">Reset Defaults</button>
+              <button id="download">Download Image</button>
+            </div>
+
+            <fieldset>
+              <legend>Canvas Dimensions</legend>
+              
+              <div class="inputset">
+                <label for="ppu">Pixels per Unit (PPU)</label>
+                <input type="number" id="ppu" name="ppu">
+
+                <label for="canvasUnits">Canvas Units</label>
+                <select id="canvasUnits" name="canvasUnits">
+                    <option value="pixels">Pixels</option>
+                    <option value="units">Units</option>
+                </select>
+              </div>
+    
+              <div class="inputset" id="pxUnit">
+                <label for="width">Width (px)</label>
+                <input type="number" id="width" name="width">
+                <label for="height">Height (px)</label>
+                <input type="number" id="height" name="height">
+              </div>
+    
+              <div class="inputset" id="customUnit">
+                <label for="unitWidth">Width (units)</label>
+                <input type="number" id="unitWidth" name="unitWidth">
+                <label for="unitHeight">Height (units)</label>
+                <input type="number" id="unitHeight" name="unitHeight">
+              </div>
+
+              <div class="inputset">
+                <label for="offsetX">Offset X (px)</label>
+                <input type="number" id="offsetX" name="offsetX">
+                <label for="offsetY">Offset Y (px)</label>
+                <input type="number" id="offsetY" name="offsetY">
+                <label for="autocenter">Auto-Center Grid</label>
+                <input type="checkbox" id="autocenter" name="autocenter">
+              </div>
+              
+              <div class="inputset">
+                <label for="scale">Scale</label>
+                <input type="number" id="scale" name="scale">
+              </div>
+              
+            </fieldset>
+    
+            <fieldset>
+              <legend>Grid Style</legend>
+              <label for="color">Line Color</label>
+              <input type="color" id="color" name="color">
+              <label for="thickness">Line Width</label>
+              <input type="number" id="thickness" name="thickness">
+            </fieldset>
+          </fieldset>
+      </div>
+
+      <div id="canvasWrapper"></div>
+
+    </main>
+  </div>
+
+</body>
+
+</html>
