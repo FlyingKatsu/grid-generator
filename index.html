@@ -54,6 +54,19 @@
     fieldset > fieldset {
       margin: 1em 0;
     }
+    #bgError {
+      background-color: #ffaaaa;
+      font-weight: bold;
+    }
+    #bgError p {
+      padding: 0.25em;
+    }
+    #bgError p::before {
+      content: '⚠️ ';
+    }
+    #bgSettings input {
+      width: 100%;
+    }
   </style>
 </head>
 
@@ -124,6 +137,27 @@
               <label for="thickness">Line Width</label>
               <input type="number" id="thickness" name="thickness">
             </fieldset>
+
+            <fieldset id="bgSettings">
+              <legend>Background Image</legend>
+              <div class="inputset">
+                <button id="toggleBG">Hide BG</button>
+                <button id="clearBG">Clear BG</button>
+              </div>
+
+              <div class="inputset">
+                  <label for="bgImgURL">Image URL</label>
+                  <input type="text" id="bgImgURL" name="bgImgURL">
+                </div>
+
+              <div id="bgError"></div>
+
+              <div class="inputset">
+                <label for="bgImgFile">Image File Upload</label>
+                <input type="file" id="bgImgFile" name="bgImgFile">
+              </div>
+            </fieldset>
+
           </fieldset>
       </div>
 
